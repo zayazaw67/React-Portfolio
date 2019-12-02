@@ -1,17 +1,39 @@
 import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+import { Media, Container, Row, Col } from 'reactstrap';
+import Pic from '../../images/pic.jpg';
+import ScrollAnimation from 'react-animate-on-scroll';
 
-const Temp = (props) => {
+import './bio.css';
+
+
+const Bio = () => {
   return (
-    <div>
-      <Jumbotron className="bg-transparent">
-        <Container fluid>
-          <h1 className="display-3">Fluid jumbotron</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </Container>
-      </Jumbotron>
-    </div>
+    <div className="bio">
+      <Container>
+        <Row>
+          <Col>
+            <Media>
+              <Media left href="#">
+                <ScrollAnimation animateIn='wobble'
+                  initiallyVisible={true}>
+                  <Media className="picture" object src={Pic} alt="Profile picture" />
+                </ScrollAnimation>
+              </Media>
+              <Media body className="details">
+                <ScrollAnimation delay={1000} animateIn='bounce'
+                  initiallyVisible={true}
+                  animateOnce={true}>
+                  <Row><strong>About Me</strong></Row>
+                  <Row>asidugbaisudgbhiasugbd</Row>
+                </ScrollAnimation>
+
+              </Media>
+            </Media>
+          </Col>
+        </Row>
+      </Container>
+    </div >
   );
 };
 
-export default Temp;
+export default Bio;

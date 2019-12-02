@@ -1,0 +1,13 @@
+.bio {
+    padding: 100px;
+    background-image: url('../../images/portfoliowp.png'); 
+
+}
+
+.details {
+    margin-left: 50px;
+}
+
+.picture {
+    border-radius: 30%;
+}

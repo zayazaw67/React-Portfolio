@@ -8,6 +8,10 @@
     max-width: 400px;
 }
 
+.cartoonOut {
+    opacity: 0;
+}
+
 .intro {
     background-image: url('../../images/background.png'); 
     height: 100%; 

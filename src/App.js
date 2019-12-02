@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/navbar';
 import './App.css';
 import Intro from './components/intro';
-import Temp from './components/bio';
+import Bio from './components/bio';
 import Portfolio from './components/portfolio';
 
 
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Intro />
-      <Temp />
+      <Bio />
       <Portfolio />
     </div>
   );
