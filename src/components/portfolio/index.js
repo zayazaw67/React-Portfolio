@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
     Container, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter,
-    Card, CardImg, CardBody, CardTitle, CardSubtitle,
+    Card, CardImg, CardBody, CardTitle, CardSubtitle, CardDeck,
 } from 'reactstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
@@ -42,44 +42,68 @@ class Portfolio extends Component {
         window.open('https://github.com/BudgetManager1/BudgetManager');
     };
 
+    fraigsRepoRedirect = () => {
+        window.open('https://github.com/Project3-Group/Fraigslist');
+    };
+
+    bamazonRepoRedirect = () => {
+        window.open('https://github.com/zayazaw67/bAmazon');
+    };
+
     // const Portfolio = (props) => {
     render() {
         return (
             <div className="background">
-                <div className="portfolio fader">
-                    <Container className="fluid">
-                        <Row>
-                            <Col xs="3">
+                <div className="portfolio">
+                    <Container fluid>
+                        <Row className="justify-content-center">
+                            <CardDeck>
+
                                 <ScrollAnimation delay={1000} duration="1" animateIn='bounceInLeft' animateOut='bounceOutLeft'>
-                                    <Card>
+                                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} className="cards">
                                         <CardTitle><h3>Budget Tracker</h3></CardTitle>
-                                        <CardImg className="images image-1" src={budgetTracker} alt="Preview of Budget Tracker" onClick={this.toggleBudgetTrackerModal} />
+                                        <CardImg className="images image-1" top width="100%" src={budgetTracker} alt="Preview of Budget Tracker" onClick={this.toggleBudgetTrackerModal} />
                                         <CardBody>
                                             <CardSubtitle>Built with MySQL, handlebars, JQuery, and NodeJs </CardSubtitle>
-                                            <Button color="warning" onClick={this.budgetRepoRedirect}>GitHub Repo</Button>
+                                            <Button color="secondary" onClick={this.budgetRepoRedirect}>GitHub Repo</Button>
                                         </CardBody>
                                     </Card>
                                 </ScrollAnimation>
-                            </Col>
 
-                            <Col xs="3">
-                                <ScrollAnimation  duration="1" animateIn='bounceInLeft' animateOut='bounceOutLeft'>
-                                    <img className="images image-2" src={fraigslist} alt="Preview of Fraigslist" onClick={this.toggleFraigslistModal}></img>
+                                <ScrollAnimation duration="1" animateIn='bounceInLeft' animateOut='bounceOutLeft'>
+                                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} className="cards">
+                                        <CardTitle><h3>FraigsList</h3></CardTitle>
+                                        <CardImg className="images image-2" top width="100%" src={fraigslist} alt="Preview of Fraigslist" onClick={this.toggleFraigslistModal} />
+                                        <CardBody>
+                                            <CardSubtitle>Built with the full MERN Stack (MongoDB, Express, React, Node).</CardSubtitle>
+                                            <Button color="secondary" onClick={this.fraigsRepoRedirect}>GitHub Repo</Button>
+                                        </CardBody>
+                                    </Card>
                                 </ScrollAnimation>
-                            </Col>
 
-                            <Col xs="3">
                                 <ScrollAnimation delay={500} duration="1" animateIn='bounceInRight' animateOut='bounceOutRight'>
-
-                                    <img className="images image-3" src={bamazon} alt="Preview of Bamazon" onClick={this.toggleBamazonModal}></img>
+                                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} className="cards ">
+                                        <CardTitle><h3>Bamazon</h3></CardTitle>
+                                        <CardImg className="images image-3" top width="100%" src={bamazon} alt="Preview of Bamazon" onClick={this.toggleBamazonModal} />
+                                        <CardBody>
+                                            <CardSubtitle>Built with Node, JavaScript, JQuery, and MySQL.</CardSubtitle>
+                                            <Button color="secondary" onClick={this.bamazonRepoRedirect}>GitHub Repo</Button>
+                                        </CardBody>
+                                    </Card>
                                 </ScrollAnimation>
 
-                            </Col>
-                            <Col xs="3">
                                 <ScrollAnimation delay={1500} duration="1" animateIn='bounceInRight' animateOut='bounceOutRight'>
-                                    asndgiuasdgoasjdgoijasdgoij
+                                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }} className="cards ">
+                                        <CardTitle><h3>Placeholder</h3></CardTitle>
+                                        <CardImg className="images image-3" top width="100%" src={bamazon} alt="Preview of Bamazon" onClick={this.toggleBamazonModal} />
+                                        <CardBody>
+                                            <CardSubtitle>Built with Node, JavaScript, JQuery, and MySQL.</CardSubtitle>
+                                            <Button color="secondary" onClick={this.bamazonRepoRedirect}>GitHub Repo</Button>
+                                        </CardBody>
+                                    </Card>
                                 </ScrollAnimation>
-                            </Col>
+                                
+                            </CardDeck>
                         </Row>
                     </Container>
                 </div>

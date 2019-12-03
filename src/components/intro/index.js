@@ -15,7 +15,7 @@ const Intro = (props) => {
                     </ScrollAnimation>
                     <hr className="my-2" />
                     <ScrollAnimation delay={500} animateIn='fadeIn' animateOnce={true}>
-                        <p >My name is Zaya. I'm a learning web developer with a passion for technology.</p>
+                        <p >My name is Zaya. I'm a learning web developer with a passion for electronics and technology.</p>
                     </ScrollAnimation>
 
                 </Col>
