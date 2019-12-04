@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-    Container, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter,
+    Container, Row, Button, Modal, ModalHeader, ModalBody, ModalFooter,
     Card, CardImg, CardBody, CardTitle, CardSubtitle, CardDeck,
 } from 'reactstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
